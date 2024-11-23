@@ -24,3 +24,4 @@ Fortgeschrittene Nutzer können die Datei **CLICK_ME_Preset.bat** mit einem Text
 ---
 
 **Viel Spaß! 😄**
+test
