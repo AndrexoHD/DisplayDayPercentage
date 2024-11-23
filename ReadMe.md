@@ -25,4 +25,3 @@ Advanced users can open the **CLICK_ME_Preset.bat** file with a text editor and 
 ---
 
 **Have fun! 😄**
-test
