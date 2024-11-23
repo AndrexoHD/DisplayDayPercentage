@@ -3,13 +3,14 @@
 Willkommen zu DisplayDayPercentage! Befolge diese Anleitung, um das Programm erfolgreich zu nutzen.
 
 ## ⚠️ Wichtige Hinweise
+Die Preset-Datei funktioniert noch nicht in Windows 11!
+
+## 🚀 Erste Schritte
 1. **Dateien entpacken:** Entpacke zuerst alle Dateien aus dem Archiv in einen normalen Ordner. Interagiere nur mit den entpackten Dateien!
 2. **Nicht ausführen:** Die Datei `DisplayDayPercentage.jar` sollte **niemals direkt ausgeführt** werden. Sie ist das eigentliche Programm.
    - Falls du sie versehentlich öffnest, beende den Task `Java(TM) Platform SE binary` über den Task-Manager.
    - **Tipp:** Der Task-Manager lässt sich am schnellsten mit der Tastenkombination `STRG+SHIFT+ESC` öffnen.
-
-## 🚀 Erste Schritte
-- Öffne **CLICK_ME.bat**, um dich mit dem Programm vertraut zu machen. Dies ist der empfohlene Einstiegspunkt.
+3. **Programm starten:** Öffne **CLICK_ME.bat**, um dich mit dem Programm vertraut zu machen. Dies ist der empfohlene Einstiegspunkt.
 
 ### Problembehebung
 - Falls der Fortschritt nach der Konfiguration **aufhört, sich zu aktualisieren**, fokussiere einfach das Fenster und drücke eine beliebige Taste.
