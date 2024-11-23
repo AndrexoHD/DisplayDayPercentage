@@ -1,6 +1,9 @@
 # DisplayDayPercentage
 
-Willkommen zu DisplayDayPercentage! Befolge diese Anleitung, um das Programm erfolgreich zu nutzen.
+Dies ist ein kleines Programm, das die Uhrzeit des Tages in Prozent anzeigt.
+Befolge diese Anleitung, um das Programm erfolgreich zu nutzen.
+- Du kannst auswählen, ob das Programm die Uhrzeit auch auf normale Weise anzeigen soll und ob du eine Statusleiste haben möchtest.
+- Wenn du möchtest, dass es sich wie ein Widget verhält, kannst du das Preset **verwenden & bearbeiten**. Mehr dazu weiter unten.
 
 ## ⚠️ Wichtige Hinweise
 Die Preset-Datei funktioniert noch nicht in Windows 11!
