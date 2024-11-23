@@ -2,7 +2,7 @@
 This is a small program which displays the time of day in percent.
 Follow this guide to successfully use the program.
 - You can select if the program will also show the time in a normal way and if you want a status bar.
-- If you want it to behave like a widget you can **use & edit** the Preset. More on that down below.
+- If you want it to behave like a widget you can **use & edit** the preset. More on that down below.
 
 ## ⚠️ Important Notes
 Only works on Windows.
