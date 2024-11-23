@@ -7,7 +7,7 @@ Die Preset-Datei funktioniert noch nicht in Windows 11!
 
 ## 🚀 Erste Schritte
 1. **Dateien entpacken:** Entpacke zuerst alle Dateien aus dem Archiv in einen normalen Ordner. Interagiere nur mit den entpackten Dateien!
-2. **Nicht ausführen:** Die Datei `DisplayDayPercentage.jar` sollte **niemals direkt ausgeführt** werden. Sie ist das eigentliche Programm.
+2. **Nicht ausführen:** Die Datei `DisplayDayPercentage.jar` sollte **niemals direkt ausgeführt** werden. Sie ist der eigentliche Programm-Code.
    - Falls du sie versehentlich öffnest, beende den Task `Java(TM) Platform SE binary` über den Task-Manager.
    - **Tipp:** Der Task-Manager lässt sich am schnellsten mit der Tastenkombination `STRG+SHIFT+ESC` öffnen.
 3. **Programm starten:** Öffne **CLICK_ME.bat**, um dich mit dem Programm vertraut zu machen. Dies ist der empfohlene Einstiegspunkt.
