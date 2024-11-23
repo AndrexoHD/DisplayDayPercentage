@@ -1,23 +1,27 @@
 # DisplayDayPercentage
+Welcome to DisplayDayPercentage! Follow this guide to successfully use the program.
+This is a small program which displays the time of day in percent.
+- You can select if the program will also show the time in a normal way and if you want a status bar.
+- If you want it to behave like a widget you can **use & edit** the Preset. More on that down below.
 
-Willkommen zu DisplayDayPercentage! Befolge diese Anleitung, um das Programm erfolgreich zu nutzen.
+## ⚠️ Important Notes
+Only works on Windows.
+The installed Java version must be 21 or newer!
+The preset file does not work on Windows 11 yet!
 
-## ⚠️ Wichtige Hinweise
-Die Preset-Datei funktioniert noch nicht in Windows 11!
+## 🚀 Getting Started
+1. **Extract Files:** First, extract all files from the archive into a normal folder. Only interact with the extracted files!
+2. **Do Not Run:** The file `DisplayDayPercentage.jar` should **never be run directly**. It is the actual program-code.
+   - If you accidentally open it, terminate the `Java(TM) Platform SE binary` task via the Task Manager.
+   - **Tip:** The Task Manager can be opened quickly using the `CTRL+SHIFT+ESC` shortcut.
+3. **Start the Program:** Open **CLICK_ME.bat** to get acquainted with the program. This is the recommended starting point.
 
-## 🚀 Erste Schritte
-1. **Dateien entpacken:** Entpacke zuerst alle Dateien aus dem Archiv in einen normalen Ordner. Interagiere nur mit den entpackten Dateien!
-2. **Nicht ausführen:** Die Datei `DisplayDayPercentage.jar` sollte **niemals direkt ausgeführt** werden. Sie ist das eigentliche Programm.
-   - Falls du sie versehentlich öffnest, beende den Task `Java(TM) Platform SE binary` über den Task-Manager.
-   - **Tipp:** Der Task-Manager lässt sich am schnellsten mit der Tastenkombination `STRG+SHIFT+ESC` öffnen.
-3. **Programm starten:** Öffne **CLICK_ME.bat**, um dich mit dem Programm vertraut zu machen. Dies ist der empfohlene Einstiegspunkt.
+### Troubleshooting
+- If the progress **stops updating** after configuration, simply focus the window and press any key.
 
-### Problembehebung
-- Falls der Fortschritt nach der Konfiguration **aufhört, sich zu aktualisieren**, fokussiere einfach das Fenster und drücke eine beliebige Taste.
-
-## 🔧 Für fortgeschrittene Benutzer
-Fortgeschrittene Nutzer können die Datei **CLICK_ME_Preset.bat** mit einem Texteditor öffnen und das Verhalten des Programms anpassen. Es gibt nur **vier Variablen**, die geändert werden müssen, um das Preset nach Wunsch zu konfigurieren.
+## 🔧 For Advanced Users
+Advanced users can open the **CLICK_ME_Preset.bat** file with a text editor and adjust the program's behavior. There are only **four variables** that need to be changed to configure the preset as desired.
 
 ---
 
-**Viel Spaß! 😄**
+**Have fun! 😄**
