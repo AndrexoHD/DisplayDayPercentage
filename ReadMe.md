@@ -6,7 +6,8 @@ Befolge diese Anleitung, um das Programm erfolgreich zu nutzen.
 - Wenn du möchtest, dass es sich wie ein Widget verhält, kannst du das Preset **verwenden & bearbeiten**. Mehr dazu weiter unten.
 
 ## ⚠️ Wichtige Hinweise
-Die Preset-Datei funktioniert noch nicht in Windows 11!
+- Die installierte Java-Version muss 21 oder neuer sein!
+- Die Preset-Datei funktioniert noch nicht in Windows 11!
 
 ## 🚀 Erste Schritte
 1. **Dateien entpacken:** Entpacke zuerst alle Dateien aus dem Archiv in einen normalen Ordner. Interagiere nur mit den entpackten Dateien!
