@@ -27,14 +27,14 @@ public class TimePercentage {
         String dayPercentString = String.format("%.2f", dayPercent);
         String hourArray;
         if(alsoPrintNormal) {
-            hourArray = "Der Tag ist " + dayPercentString + "% vorbei!";
-        } else hourArray = "\nDer Tag ist " + dayPercentString + "% vorbei!";
+            hourArray = "The day is " + dayPercentString + "% over!";
+        } else hourArray = "\nThe day is " + dayPercentString + "% over!";
         return hourArray;
     }
 
     private static void printDayTime(String [] hourArray) {
         for(int i = 0; i < hourArray.length; i++) {
-            if(i == 0) System.out.print("\nAktuelle Uhrzeit: ");
+            if(i == 0) System.out.print("\nCurrent Time: ");
             if(i != hourArray.length-1) {
                 System.out.print(hourArray[i] + ":");
             } else {

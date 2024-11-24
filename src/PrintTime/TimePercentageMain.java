@@ -15,72 +15,72 @@ public class TimePercentageMain {
         String input;
         if(args.length == 0) {
             clearTerminal();
-            System.out.println("Erstmal ein paar Konfigurationen:\nSoll die Zeit auch im normalen Format ausgegeben werden?\n[y|n]");
+            System.out.println("Firstly some configuration:\nShould the time also be displayed in a normal format?\n[y|n]");
             while(in.hasNext()) {
                 input = in.next();
-                if(input.equals("y") || input.equals("Y")) {
+                if(input.equalsIgnoreCase("y")) {
                     alsoPrintNormal = true;
                     break;
-                } else if(input.equals("n") || input.equals("N")) {
+                } else if(input.equalsIgnoreCase("n")) {
                     alsoPrintNormal = false;
                     break;
                 } else {
-                    System.out.println("Ungültige Eingabe!");
+                    System.out.println("Invalid input!");
                     continue;
                 }
             }
             clearTerminal();
-            System.out.println("Soll eine Statusleiste Ausgegeben werden?[y|n]");
+            System.out.println("Should a status bar be displayed?[y|n]");
             while(in.hasNext()) {
                 input = in.next();
-                if(input.equals("y") || input.equals("Y")) {
+                if(input.equalsIgnoreCase("y")) {
                     printStatusBar = true;
                     break;
-                } else if(input.equals("n") || input.equals("N")) {
+                } else if(input.equalsIgnoreCase("n")) {
                     printStatusBar = false;
                     break;
                 } else {
-                    System.out.println("Ungültige Eingabe!");
+                    System.out.println("Invalid input!");
                     continue;
                 }
             }
             clearTerminal();
-            System.out.println("Soll das Terminal nach jeder Aktualisierung sauber gemacht werden?\n[y|n]");
+            System.out.println("Should the terminal be cleaned after every update?\n[y|n]");
             while(in.hasNext()) {
                 input = in.next();
-                if(input.equals("y") || input.equals("Y")) {
+                if(input.equalsIgnoreCase("y")) {
                     clearAfterPrint = true;
                     break;
-                } else if(input.equals("n") || input.equals("N")) {
+                } else if(input.equalsIgnoreCase("n")) {
                     clearAfterPrint = false;
                     break;
                 } else {
-                    System.out.println("Ungültige Eingabe!");
+                    System.out.println("Invalid input!");
                     continue;
                 }
             }
             clearTerminal();
-            System.out.println("Als letztes, wie groß soll das Intervall mindestens sein, bevor das Programm den Fortschritt prüft? (in Sekunden)\nAntworten unter 0.5 werden automatisch als 0.5 interpretiert,\num dem Prozessor mindestens eine halbe Sekunde Zeit zu geben.");
+            System.out.println("Lastly, how big should the interval be, before the program checks the time? (in Seconds)\nAnswers under 0.5 will automatically be interpeted as 0.5,\nto give the processor at least half a second of breathing room.");
             double doubleInput = 0.5;
             while(in.hasNext()) {
                 try {
                     doubleInput = Double.parseDouble(in.next());
                 } catch (NumberFormatException e) {
-                    System.out.println("Ungültige Eingabe!");
+                    System.out.println("Invalid input!");
                     continue;
                 }
                 if(doubleInput < 0.5) {
                     clearTerminal();
-                    System.out.println("Intervall ist mindestens 0.5 Sekunden.");
+                    System.out.println("Interval is at least 0.5 seconds.");
                     break;
                 } else {
                     clearTerminal();
-                    System.out.println("Intervall ist mindestens " + doubleInput + " Sekunden.");
+                    System.out.println("interval is at least " + doubleInput + " seconds.");
                     minDelayInSeconds = doubleInput;
                     break;
                 }
             }
-            System.out.println("Abfahrt!");
+            System.out.println("Let's Go!");
         } else {
             clearTerminal();
             try {
@@ -94,10 +94,10 @@ public class TimePercentageMain {
                     throw new IndexOutOfBoundsException();
                 }
             } catch (IndexOutOfBoundsException e) {
-                System.out.println("Nicht 4 Argumente!\nBei einem Preset müssen die Argumente in dieser Form übergeben werden:");
-                System.out.println("\nbool<alsoPrintNormal>\n[true|false]\n\nbool<printStatusBar>\n[true|false]\n\nbool<clearAfterPrint>\n[true|false]\n\ndouble<minDelayInSeconds>\n[Gleitkommazahl]");
+                System.out.println("Not 4 arguments!\nThe arguments must be given in the following form when using a preset:");
+                System.out.println("\nbool<alsoPrintNormal>\n[true|false]\n\nbool<printStatusBar>\n[true|false]\n\nbool<clearAfterPrint>\n[true|false]\n\ndouble<minDelayInSeconds>\n[Floating-point number] (e.g. 2.5)");
                 while(true) {
-                    // Programm wird nach 100 Sekunden beendet. Gibt bessere implementierungen...
+                    // Programm will end after 100 seconds. There could be better ways...
                     try {
                         Thread.sleep(100000);
                         System.exit(1);
