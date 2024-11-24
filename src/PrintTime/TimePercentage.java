@@ -38,7 +38,7 @@ public class TimePercentage {
             if(i != hourArray.length-1) {
                 System.out.print(hourArray[i] + ":");
             } else {
-                System.out.println(hourArray[i]);
+                System.out.println(hourArray[i] + "!");
             }
         }
     }
