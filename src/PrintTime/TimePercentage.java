@@ -12,24 +12,28 @@ public class TimePercentage {
         double minute = Double.parseDouble(hourArray[1]);
         double second = Double.parseDouble(hourArray[2]);
         if(alsoPrintNormal) printDayTime(hourArray);
-        String DayPercentageString = getDayPercentage(hour, minute, second, alsoPrintNormal);
+        String DayPercentageString = getDayPercentageText(hour, minute, second, alsoPrintNormal);
         System.out.print(DayPercentageString);
-        if(printStatusBar) printStatusBar(hour);
+        if(printStatusBar) printStatusBar(hour, minute, second);
         double intervalInMilli = minIntervalInSeconds * 1000;
         if(autoUpdate) update(DayPercentageString, intervalInMilli, alsoPrintNormal, clearAfterPrint, printStatusBar);
     }
 
-    private static String getDayPercentage(double hour, double minute, double second, boolean alsoPrintNormal) {
-        double hourPercent = 100 * hour / 24;
-        double minutePercent = 100 * minute / 60 / 24;
-        double secondPercent = 100 * second / 60 / 60 / 24;
-        double dayPercent = (hourPercent + minutePercent + secondPercent);
-        String dayPercentString = String.format("%.2f", dayPercent);
+    private static String getDayPercentageText(double hour, double minute, double second, boolean alsoPrintNormal) {
+        String dayPercentString = String.format("%.2f", getDayPercentage(hour, minute, second));
         String hourArray;
         if(alsoPrintNormal) {
             hourArray = "Der Tag ist " + dayPercentString + "% vorbei!";
         } else hourArray = "\nDer Tag ist " + dayPercentString + "% vorbei!";
         return hourArray;
+    }
+
+    public static double getDayPercentage(double hour, double minute, double second) {
+        double hourPercent = 100 * hour / 24;
+        double minutePercent = 100 * minute / 60 / 24;
+        double secondPercent = 100 * second / 60 / 60 / 24;
+        double dayPercent = (hourPercent + minutePercent + secondPercent);
+        return dayPercent;
     }
 
     private static void printDayTime(String [] hourArray) {
@@ -60,13 +64,13 @@ public class TimePercentage {
             double hour   = Double.parseDouble(hourArray[0]);
             double minute = Double.parseDouble(hourArray[1]);
             double second = Double.parseDouble(hourArray[2]);
-            String newDayPercentage = getDayPercentage(hour, minute, second, alsoPrintNormal);
+            String newDayPercentage = getDayPercentageText(hour, minute, second, alsoPrintNormal);
             if(!DayPercentageString.equals(newDayPercentage)) {
                 if(clearAfterPrint) clearTerminal();
                 if(alsoPrintNormal) printDayTime(hourArray);
                 DayPercentageString = newDayPercentage;
                 System.out.print(newDayPercentage);
-                if(printStatusBar) printStatusBar(hour);
+                if(printStatusBar) printStatusBar(hour, minute, second);
             }
         }
     }
@@ -78,12 +82,11 @@ public class TimePercentage {
         }
     }
 
-    protected static void printStatusBar(double hour) {
+    protected static void printStatusBar(double hour, double minute, double second) {
         StringBuilder sb = new StringBuilder();
-        int widthOfPrintedText = 24; // MAX 24 !!! TODO
-        double proportionToLineLength = 24/widthOfPrintedText;
-        double maxStatusBarLength = Math.round(hour/proportionToLineLength);
-        for(int i = 0; i < maxStatusBarLength; i++) {
+        int widthOfPrintedText = 24;
+        double blockAmount = widthOfPrintedText * getDayPercentage(hour, minute, second) / 100;
+        for(int i = 0; i < (int) blockAmount; i++) {
             sb.append("\u2588");
         }
         System.out.printf("\n[%-" + (int) widthOfPrintedText + "s]", sb.toString());
