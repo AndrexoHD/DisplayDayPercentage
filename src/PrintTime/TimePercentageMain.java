@@ -18,10 +18,10 @@ public class TimePercentageMain {
             System.out.println("Erstmal ein paar Konfigurationen:\nSoll die Zeit auch im normalen Format ausgegeben werden?\n[y|n]");
             while(in.hasNext()) {
                 input = in.next();
-                if(input.equals("y") || input.equals("Y")) {
+                if(input.equalsIgnoreCase("y")) {
                     alsoPrintNormal = true;
                     break;
-                } else if(input.equals("n") || input.equals("N")) {
+                } else if(input.equalsIgnoreCase("n")) {
                     alsoPrintNormal = false;
                     break;
                 } else {
@@ -33,10 +33,10 @@ public class TimePercentageMain {
             System.out.println("Soll eine Statusleiste Ausgegeben werden?[y|n]");
             while(in.hasNext()) {
                 input = in.next();
-                if(input.equals("y") || input.equals("Y")) {
+                if(input.equalsIgnoreCase("y")) {
                     printStatusBar = true;
                     break;
-                } else if(input.equals("n") || input.equals("N")) {
+                } else if(input.equalsIgnoreCase("n")) {
                     printStatusBar = false;
                     break;
                 } else {
@@ -48,10 +48,10 @@ public class TimePercentageMain {
             System.out.println("Soll das Terminal nach jeder Aktualisierung sauber gemacht werden?\n[y|n]");
             while(in.hasNext()) {
                 input = in.next();
-                if(input.equals("y") || input.equals("Y")) {
+                if(input.equalsIgnoreCase("y")) {
                     clearAfterPrint = true;
                     break;
-                } else if(input.equals("n") || input.equals("N")) {
+                } else if(input.equalsIgnoreCase("n")) {
                     clearAfterPrint = false;
                     break;
                 } else {
