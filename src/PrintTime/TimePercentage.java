@@ -81,7 +81,7 @@ public class TimePercentage {
     protected static void printStatusBar(double hour) {
         StringBuilder sb = new StringBuilder();
         int widthOfPrintedText = 24; // MAX 24 !!! TODO
-        double maxStatusBarLength = Math.nextDown(((int)hour)/(24/widthOfPrintedText));
+        double maxStatusBarLength = Math.round(((int)hour)/(24/widthOfPrintedText));
         for(int i = 0; i <= maxStatusBarLength; i++) {
             sb.append("\u2588");
         }
