@@ -83,7 +83,7 @@ public class TimePercentage {
         double widthOfPrintedText = 20;
         double proportionToLineLength = 24/widthOfPrintedText;
         double maxStatusBarLength = Math.round(hour/proportionToLineLength);
-        for(int i = 0; i <= maxStatusBarLength; i++) {
+        for(int i = 0; i < maxStatusBarLength; i++) {
             sb.append("\u2588");
         }
         System.out.printf("\n[%-" + (int) widthOfPrintedText + "s]", sb.toString());
