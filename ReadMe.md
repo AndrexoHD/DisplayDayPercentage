@@ -7,6 +7,7 @@ Befolge diese Anleitung, um das Programm erfolgreich zu nutzen.
 - Wenn du möchtest, dass es sich wie ein Widget verhält, kannst du das Preset **verwenden & bearbeiten**. Mehr dazu weiter unten.
 
 ## ⚠️ Wichtige Hinweise
+Funktioniert nur auf Windows.
 - Die Preset-Datei funktioniert noch nicht in Windows 11!
 
 ## 🚀 Erste Schritte
