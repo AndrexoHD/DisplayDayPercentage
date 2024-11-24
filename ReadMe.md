@@ -6,7 +6,6 @@ Follow this guide to successfully use the program.
 
 ## ⚠️ Important Notes
 Only works on Windows.
-- The installed Java version must be 21 or newer!
 - The preset file does not work on Windows 11 yet!
 
 ## 🚀 Getting Started
