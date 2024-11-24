@@ -60,7 +60,7 @@ public class TimePercentageMain {
                 }
             }
             clearTerminal();
-            System.out.println("Lastly, how big should the interval be, before the program checks the time? (in Seconds)\nAnswers under 0.5 will automatically be interpeted as 0.5,\nto give the processor at least half a second of breathing room.");
+            System.out.println("Lastly, how big should the interval be, before the program checks the time? (in seconds)\nAnswers under 0.5 will automatically be interpeted as 0.5,\nto give the processor at least half a second of breathing room.");
             double doubleInput = 0.5;
             while(in.hasNext()) {
                 try {
