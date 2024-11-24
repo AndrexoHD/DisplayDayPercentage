@@ -1,5 +1,5 @@
 # DisplayDayPercentage
-An English version can be found here:
+The English version can be found here:
 https://github.com/AndrexoHD/DisplayDayPercentage/tree/DisplayDayPercentage-English
 
 Dies ist ein kleines Programm, das die Uhrzeit des Tages in Prozent anzeigt.
