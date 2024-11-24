@@ -30,7 +30,7 @@ public class TimePercentageMain {
                 }
             }
             clearTerminal();
-            System.out.println("Should a status bar be displayed?[y|n]");
+            System.out.println("Should a status bar be displayed?\n[y|n]");
             while(in.hasNext()) {
                 input = in.next();
                 if(input.equalsIgnoreCase("y")) {
