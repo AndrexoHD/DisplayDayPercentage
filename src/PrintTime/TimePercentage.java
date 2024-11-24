@@ -84,7 +84,7 @@ public class TimePercentage {
 
     protected static void printStatusBar(double hour, double minute, double second) {
         StringBuilder sb = new StringBuilder();
-        int widthOfPrintedText = 24;
+        int widthOfPrintedText = 24; // -2 because of [ ]
         double blockAmount = widthOfPrintedText * getDayPercentage(hour, minute, second) / 100;
         for(int i = 0; i < (int) blockAmount; i++) {
             sb.append("\u2588");
