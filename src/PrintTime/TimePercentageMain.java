@@ -30,7 +30,7 @@ public class TimePercentageMain {
                 }
             }
             clearTerminal();
-            System.out.println("Soll eine Statusleiste Ausgegeben werden?[y|n]");
+            System.out.println("Soll eine Statusleiste Ausgegeben werden?\n[y|n]");
             while(in.hasNext()) {
                 input = in.next();
                 if(input.equalsIgnoreCase("y")) {
