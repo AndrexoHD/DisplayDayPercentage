@@ -37,14 +37,7 @@ public class TimePercentage {
     }
 
     private static void printDayTime(String [] hourArray) {
-        for(int i = 0; i < hourArray.length; i++) {
-            if(i == 0) System.out.print("\nAktuelle Uhrzeit: ");
-            if(i != hourArray.length-1) {
-                System.out.print(hourArray[i] + ":");
-            } else {
-                System.out.println(hourArray[i]);
-            }
-        }
+        System.out.println("\nAktuelle Uhrzeit: " + hourArray[0] + ":" + hourArray[1] + ":" + hourArray[2]);
     }
 
     private static void update(String DayPercentageString, double intervalInMilli, boolean alsoPrintNormal, boolean clearAfterPrint, boolean printStatusBar) {
