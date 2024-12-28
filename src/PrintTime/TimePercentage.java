@@ -6,7 +6,7 @@ public class TimePercentage {
     public static void printDayPercentage(double minIntervalInSeconds, boolean alsoPrintNormal, boolean clearAfterPrint, boolean printStatusBar) {
         LocalTime localTime = LocalTime.now();
         String localTimeString = localTime.toString();
-        String[] hourArray = localTimeString.split("[:|.]", 3);
+        String[] hourArray = localTimeString.split(":", 3);
         hourArray[2] = String.format("%.2s", hourArray[2]);
         double hour   = Double.parseDouble(hourArray[0]);
         double minute = Double.parseDouble(hourArray[1]);
@@ -42,9 +42,7 @@ public class TimePercentage {
 
     private static void update(String DayPercentageString, double intervalInMilli, boolean alsoPrintNormal, boolean clearAfterPrint, boolean printStatusBar) {
         while(true) {
-            if(intervalInMilli < 500) {
-                intervalInMilli = 500;
-            }
+            if(intervalInMilli < 500) intervalInMilli = 500;
             try {
                 Thread.sleep((int) intervalInMilli);
             } catch (InterruptedException e) {
@@ -69,7 +67,7 @@ public class TimePercentage {
     }
 
     protected static void clearTerminal() {
-        // clear Terminal. Ist kagge aber ist der einfachste weg.
+        // clear Terminal. It's shit but it's the only cross-platform way.
         for (int i = 0; i < 100; i++) {
             System.out.println();
         }
