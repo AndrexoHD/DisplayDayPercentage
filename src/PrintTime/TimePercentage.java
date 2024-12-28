@@ -3,7 +3,7 @@ import java.time.LocalTime;
 
 public class TimePercentage {
 
-    public static void printDayPercentage(double minIntervalInSeconds, boolean alsoPrintNormal, boolean autoUpdate, boolean clearAfterPrint, boolean printStatusBar) {
+    public static void printDayPercentage(double minIntervalInSeconds, boolean alsoPrintNormal, boolean clearAfterPrint, boolean printStatusBar) {
         LocalTime localTime = LocalTime.now();
         String localTimeString = localTime.toString();
         String[] hourArray = localTimeString.split("[:|.]", 3);
@@ -16,7 +16,7 @@ public class TimePercentage {
         System.out.print(DayPercentageString);
         if(printStatusBar) printStatusBar(hour, minute, hour);
         double intervalInMilli = minIntervalInSeconds * 1000;
-        if(autoUpdate) update(DayPercentageString, intervalInMilli, alsoPrintNormal, clearAfterPrint, printStatusBar);
+        update(DayPercentageString, intervalInMilli, alsoPrintNormal, clearAfterPrint, printStatusBar);
     }
 
     private static String getDayPercentageText(double hour, double minute, double second, boolean alsoPrintNormal) {
