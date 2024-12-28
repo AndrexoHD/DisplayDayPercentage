@@ -3,10 +3,11 @@ import java.time.LocalTime;
 
 public class TimePercentage {
 
-    public static void printDayPercentage(double minIntervalInSeconds, boolean alsoPrintNormal, boolean autoUpdate, boolean clearAfterPrint, boolean printStatusBar) {
+    public static void printDayPercentage(double minIntervalInSeconds, boolean alsoPrintNormal, boolean clearAfterPrint, boolean printStatusBar) {
         LocalTime localTime = LocalTime.now();
         String localTimeString = localTime.toString();
-        String[] hourArray = localTimeString.split("[:|.]", 3);
+        System.out.println(localTimeString);
+        String[] hourArray = localTimeString.split(":", 3);
         hourArray[2] = String.format("%.2s", hourArray[2]);
         double hour   = Double.parseDouble(hourArray[0]);
         double minute = Double.parseDouble(hourArray[1]);
@@ -16,7 +17,7 @@ public class TimePercentage {
         System.out.print(DayPercentageString);
         if(printStatusBar) printStatusBar(hour, minute, second);
         double intervalInMilli = minIntervalInSeconds * 1000;
-        if(autoUpdate) update(DayPercentageString, intervalInMilli, alsoPrintNormal, clearAfterPrint, printStatusBar);
+        update(DayPercentageString, intervalInMilli, alsoPrintNormal, clearAfterPrint, printStatusBar);
     }
 
     private static String getDayPercentageText(double hour, double minute, double second, boolean alsoPrintNormal) {
@@ -42,9 +43,7 @@ public class TimePercentage {
 
     private static void update(String DayPercentageString, double intervalInMilli, boolean alsoPrintNormal, boolean clearAfterPrint, boolean printStatusBar) {
         while(true) {
-            if(intervalInMilli < 500) {
-                intervalInMilli = 500;
-            }
+            if(intervalInMilli < 500) intervalInMilli = 500;
             try {
                 Thread.sleep((int) intervalInMilli);
             } catch (InterruptedException e) {

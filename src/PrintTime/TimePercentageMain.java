@@ -108,7 +108,6 @@ public class TimePercentageMain {
             }
         }
         in.close();
-        boolean autoUpdate = true;
-        printDayPercentage(minDelayInSeconds, alsoPrintNormal, autoUpdate, clearAfterPrint, printStatusBar);
+        printDayPercentage(minDelayInSeconds, alsoPrintNormal, clearAfterPrint, printStatusBar);
     }
 }
