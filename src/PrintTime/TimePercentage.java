@@ -37,14 +37,7 @@ public class TimePercentage {
     }
 
     private static void printDayTime(String [] hourArray) {
-        for(int i = 0; i < hourArray.length; i++) {
-            if(i == 0) System.out.print("\nCurrent Time: ");
-            if(i != hourArray.length-1) {
-                System.out.print(hourArray[i] + ":");
-            } else {
-                System.out.println(hourArray[i] + "!");
-            }
-        }
+        System.out.println("\nCurrent Time: " + hourArray[0] + ":" + hourArray[1] + ":" + hourArray[2] + "!");
     }
 
     private static void update(String DayPercentageString, double intervalInMilli, boolean alsoPrintNormal, boolean clearAfterPrint, boolean printStatusBar) {
@@ -84,7 +77,7 @@ public class TimePercentage {
 
     protected static void printStatusBar(double hour, double minute, double second) {
         StringBuilder sb = new StringBuilder();
-        double widthOfPrintedText = 21; // -2 because of [ ]
+        double widthOfPrintedText = 21; // -2 because [ ]
         double blockAmount = widthOfPrintedText * getDayPercentage(hour, minute, second) / 100;
         for(int i = 0; i < (int) blockAmount; i++) {
             sb.append("\u2588");
