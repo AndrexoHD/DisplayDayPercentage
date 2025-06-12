@@ -6,7 +6,6 @@ public class TimePercentage {
     public static void printDayPercentage(double minIntervalInSeconds, boolean alsoPrintNormal, boolean clearAfterPrint, boolean printStatusBar) {
         LocalTime localTime = LocalTime.now();
         String localTimeString = localTime.toString();
-        System.out.println(localTimeString);
         String[] hourArray = localTimeString.split(":", 3);
         hourArray[2] = String.format("%.2s", hourArray[2]);
         double hour   = Double.parseDouble(hourArray[0]);
